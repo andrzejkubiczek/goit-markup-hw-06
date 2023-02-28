@@ -382,11 +382,16 @@ footer {
   transition: background-color 250ms var(--cubic-bezier);
 }
 
-.footer-social {
+.footer-social,
+.footer-newsletter {
   margin-top: 12px;
 }
 
-.footer-social h4 {
+.footer-social {
+  margin-right: 78px;
+}
+
+.footer h4 {
   margin-bottom: 20px;
   color: var(--white-color);
   font-weight: 700;
@@ -406,6 +411,10 @@ footer {
 .footer-social .footer-social-icons li a:focus {
   background-color: var(--link-color);
   transition: background-color 250ms var(--cubic-bezier);
+}
+
+.newsletter button[type='submit'] {
+  background-color: var(--link-color);
 }
 
 .portfolio-buttons {
