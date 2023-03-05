@@ -648,3 +648,21 @@ form[name='modal-form'] {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
+
+.modal-form-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.modal-form-checkbox span {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--contact-color);
+}
+
+.modal-form-checkbox span a {
+  color: var(--link-color);
+}
