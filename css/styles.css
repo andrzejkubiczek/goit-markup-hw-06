@@ -569,9 +569,16 @@ form[name='newsletter'] {
 form[name='newsletter'] input {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--border-radius);
-  background-color: var(--bg-color);
+  background-color: transparent;
   padding: 15px 16px;
   width: 358px;
+}
+
+form[name='newsletter'] input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--footer-contact-color);
 }
 
 form[name='newsletter'] button {
@@ -587,11 +594,4 @@ form[name='newsletter'] button {
   border: 0;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-}
-
-form[name='newsletter'] input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: var(--footer-contact-color);
 }
