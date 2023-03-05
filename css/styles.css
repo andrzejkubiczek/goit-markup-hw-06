@@ -654,6 +654,26 @@ form[name='modal-form'] {
   align-items: center;
   justify-content: center;
   gap: 7px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.modal-form-checkbox input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 15px;
+  position: absolute;
+  top: 20%;
+  left: 15px;
+  background-color: var(--white-color);
+  border: 2px solid var(--brand-color);
+  border-radius: 2px;
+}
+
+.modal-form-checkbox input:checked {
+  opacity: 0;
 }
 
 .modal-form-checkbox span {
