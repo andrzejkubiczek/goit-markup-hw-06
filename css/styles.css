@@ -391,8 +391,7 @@ footer {
   margin-right: 78px;
 }
 
-.footer h4,
-form[name='newsletter'] label {
+.footer h4 {
   margin-bottom: 20px;
   color: var(--white-color);
   font-weight: 700;
@@ -418,7 +417,9 @@ form[name='newsletter'] label {
   margin-bottom: 50px;
 }
 
-.portfolio-buttons-list {
+.portfolio-buttons-list,
+form[name='newsletter'],
+form[name='newsletter'] button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -560,34 +561,10 @@ form[name='newsletter'] label {
   transition: fill 250ms var(--cubic-bezier);
 }
 
-form[name='newsletter'],
-form[name='newsletter'] button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-form[name='newsletter'] label {
-  display: flex;
-  flex-direction: column;
-}
-
-form[name='newsletter'] input {
-  margin-top: 20px;
-  padding: 15px 295px 15px 15px;
-  border-radius: var(--border-radius);
-}
-
-form[name='newsletter'] input::placeholder {
-  letter-spacing: 0.03em;
-  font-size: 16px;
-  line-height: 1.25;
+form[name='newsletter'] {
+  gap: 12px;
 }
 
 form[name='newsletter'] button {
-  padding: 10px 28px 10px 42px;
-}
-
-form[name='newsletter'] button svg {
-  margin-left: 24px;
+  gap: 24px;
 }
