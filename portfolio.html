@@ -298,8 +298,17 @@
           </ul>
         </div>
         <div class="footer-newsletter">
-          <form name="newsletter" autocomplete="on" novalidate>
-            <button type="submit"></button>
+          <form name="newsletter" autocomplete="on">
+            <label>
+              Zapisz się do newslettera
+              <input type="email" name="newsletter-email" placeholder="E-mail" required />
+            </label>
+            <button type="submit">
+              Zapisz się
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>

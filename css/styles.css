@@ -31,7 +31,8 @@ ul {
   list-style: none;
 }
 
-img {
+img,
+svg {
   display: block;
 }
 
@@ -390,7 +391,8 @@ footer {
   margin-right: 78px;
 }
 
-.footer h4 {
+.footer h4,
+form[name='newsletter'] label {
   margin-bottom: 20px;
   color: var(--white-color);
   font-weight: 700;
@@ -556,4 +558,36 @@ footer {
 .close-btn:hover {
   fill: var(--link-color);
   transition: fill 250ms var(--cubic-bezier);
+}
+
+form[name='newsletter'],
+form[name='newsletter'] button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form[name='newsletter'] label {
+  display: flex;
+  flex-direction: column;
+}
+
+form[name='newsletter'] input {
+  margin-top: 20px;
+  padding: 15px 295px 15px 15px;
+  border-radius: var(--border-radius);
+}
+
+form[name='newsletter'] input::placeholder {
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+form[name='newsletter'] button {
+  padding: 10px 28px 10px 42px;
+}
+
+form[name='newsletter'] button svg {
+  margin-left: 24px;
 }
