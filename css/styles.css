@@ -623,6 +623,7 @@ form[name='modal-form'] {
 }
 
 .modal-form-item input {
+  outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: var(--border-radius);
   padding-left: 42px;
@@ -630,10 +631,14 @@ form[name='modal-form'] {
 }
 
 .modal-form-item input:focus,
+.modal-form-item input:focus + svg,
+.modal-form-item input:hover,
+.modal-form-item input:hover + svg,
 .modal-form-item textarea:focus,
-.modal-form-item input:focus + svg {
-  outline-color: var(--link-color);
+.modal-form-item textarea:hover {
+  border-color: var(--link-color);
   fill: var(--link-color);
+  transition: border-color 250ms var(--cubic-bezier), fill 250ms var(--cubic-bezier);
 }
 
 .modal-form-item svg {
@@ -643,6 +648,7 @@ form[name='modal-form'] {
 }
 
 .modal-form-item textarea {
+  outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: var(--border-radius);
   padding: 12px 16px;
@@ -681,6 +687,7 @@ form[name='modal-form'] {
 
 .modal-form-checkbox input:checked {
   opacity: 0;
+  transition: opacity 250ms var(--cubic-bezier);
 }
 
 .modal-form-checkbox span {
