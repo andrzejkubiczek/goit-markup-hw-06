@@ -618,8 +618,8 @@ form[name='modal-form'] {
   letter-spacing: 0.01em;
   display: flex;
   flex-direction: column;
-  position: relative;
   gap: 4px;
+  position: relative;
 }
 
 .modal-form-item input {
@@ -627,6 +627,13 @@ form[name='modal-form'] {
   border-radius: var(--border-radius);
   padding-left: 42px;
   height: 40px;
+}
+
+.modal-form-item input:focus,
+.modal-form-item textarea:focus,
+.modal-form-item input:focus + svg {
+  outline-color: var(--link-color);
+  fill: var(--link-color);
 }
 
 .modal-form-item svg {
