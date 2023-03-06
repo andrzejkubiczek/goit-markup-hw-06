@@ -566,6 +566,7 @@ form[name='newsletter'] button {
 
 form[name='newsletter'] {
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 form[name='newsletter'] input {
