@@ -442,14 +442,21 @@
         <form name="modal-form">
           <label class="modal-form-item">
             Imię
-            <input type="text" name="username" minlength="3" required />
+            <input
+              type="text"
+              name="username"
+              minlength="3"
+              pattern="^[a-zA-Z]+$"
+              title="Your name must be a word."
+              required
+            />
             <svg width="18" height="18">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </label>
           <label class="modal-form-item">
             Telefon
-            <input type="tel" name="phone" required />
+            <input type="tel" name="phone" pattern="[0-9]" title="Your phone number can only have numbers" required />
             <svg width="18" height="18">
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
