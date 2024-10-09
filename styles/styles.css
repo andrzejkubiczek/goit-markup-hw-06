@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--text-color);
   background-color: var(--white-color);
   letter-spacing: 0.02em;
@@ -58,7 +58,7 @@ address {
 }
 
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: var(--primary-brand-color);
@@ -107,7 +107,7 @@ address {
 
 .menu-link.active::after {
   display: block;
-  content: "";
+  content: '';
   height: 4px;
   background-color: var(--pressed-state-color);
   border-radius: 2px;
@@ -138,6 +138,16 @@ address {
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto auto;
+}
+
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office@2x.jpg);
+  }
 }
 
 .hero .container {
