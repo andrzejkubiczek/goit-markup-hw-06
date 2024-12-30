@@ -192,12 +192,12 @@ address {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px;
 }
 
 .features-item,
 .team-item {
-  flex-basis: calc((100% - 72px) / 4);
+  flex-basis: 100%;
 }
 
 .features-item {
@@ -207,9 +207,10 @@ address {
 }
 
 .features-item-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  line-height: 1.1;
   color: var(--dark-color);
 }
 
@@ -221,13 +222,14 @@ address {
 .features-icons {
   width: 264px;
   height: 112px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: var(--light-color);
   border: 1px solid var(--subtle-text-color);
   border-radius: var(--border-radius);
 }
+
 .team {
   background-color: var(--light-color);
 }
@@ -482,11 +484,12 @@ address {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: calc(100vw - 30px);
   max-width: 288px;
   min-height: 623px;
   border-radius: var(--border-radius);
   background-color: var(--modal-color);
-  padding: 72px 24px 24px;
+  padding: 72px 16px 16px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
   transition: transform 250ms var(--cubic-bezier);
@@ -637,6 +640,7 @@ address {
 }
 
 .modal-privacy-text {
+  width: 100%;
   margin-left: 8px;
 }
 
@@ -651,9 +655,46 @@ address {
   transition: color 250ms var(--cubic-bezier);
 }
 
+/* TABLET */
 @media screen and (min-width: 768px) {
+  .features-list,
+  .team-list,
+  .portfolio-list {
+    gap: 24px;
+  }
+
+  .features-item-title {
+    text-align: left;
+  }
+
   .modal {
     max-width: 408px;
     min-height: 584px;
+    padding: 72px 24px 24px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .features-item,
+  .team-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1158px) {
+  .features-item,
+  .team-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+
+  .features-icons {
+    display: flex;
+  }
+
+  .features-item-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
   }
 }
