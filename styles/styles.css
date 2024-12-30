@@ -71,11 +71,6 @@ address {
   color: var(--dark-color);
 }
 
-.navigation {
-  flex-grow: 1;
-  margin-left: 76px;
-}
-
 .menu,
 .contact {
   display: flex;
@@ -657,10 +652,18 @@ address {
 
 /* TABLET */
 @media screen and (min-width: 768px) {
+  .navigation {
+    flex-grow: 1;
+    margin-left: 120px;
+  }
+
   .features-list,
-  .team-list,
   .portfolio-list {
     gap: 24px;
+  }
+
+  .team .team-list {
+    gap: 72px 24px;
   }
 
   .features-item-title {
@@ -674,15 +677,45 @@ address {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .navigation,
+  .contact {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1157px) {
+  .contact {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-link {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+  }
+
   .features-item,
   .team-item {
     flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .container {
+    max-width: 768px;
+  }
+
+  .team .container {
+    padding: 0 108px;
   }
 }
 
 /* DESKTOP */
 @media screen and (min-width: 1158px) {
+  .navigation {
+    margin-left: 76px;
+  }
+
   .features-item,
   .team-item {
     flex-basis: calc((100% - 72px) / 4);
