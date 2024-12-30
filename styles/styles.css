@@ -781,8 +781,8 @@ address {
 }
 
 @media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none;
+  .container {
+    max-width: 768px;
   }
 
   .navigation {
@@ -820,6 +820,10 @@ address {
     gap: 24px;
   }
 
+  .menu-toggle {
+    display: none;
+  }
+
   .modal {
     max-width: 408px;
     min-height: 584px;
@@ -850,10 +854,6 @@ address {
     flex-basis: calc((100% - 24px) / 2);
   }
 
-  .container {
-    max-width: 768px;
-  }
-
   .page-footer .container {
     padding: 0 108px;
     justify-content: start;
@@ -874,6 +874,10 @@ address {
 
   .container {
     max-width: 1158px;
+    padding: 0 15px;
+  }
+
+  .team .container {
     padding: 0 15px;
   }
 
