@@ -381,12 +381,15 @@ address {
 
 .page-footer .container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+  justify-content: center;
 }
 
-.footer-column {
+.footer-column .logo {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: center;
+  margin-bottom: 16px;
 }
 
 .logo-light {
@@ -399,25 +402,21 @@ address {
   color: var(--light-color);
 }
 
-.footer-column:nth-child(2) {
-  margin-left: 120px;
-}
-
-.footer-column:nth-child(3) {
-  margin-left: 80px;
-}
-
 .footer-title {
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: var(--white-color);
+  margin-bottom: 16px;
 }
 
 .subscribe {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
 }
+
 .subscribe-input {
   background-color: transparent;
   border: 1px solid var(--white-color);
@@ -453,9 +452,10 @@ address {
   font-size: 16px;
   letter-spacing: 0.04em;
   font-weight: 500;
-  min-width: 165px;
-  min-height: 40px;
   padding: 8px 24px;
+  min-width: 165px;
+  height: 40px;
+  margin: 0 auto;
   cursor: pointer;
 }
 
@@ -659,6 +659,13 @@ address {
   transition: color 250ms var(--cubic-bezier);
 }
 
+@media screen and (max-width: 767px) {
+  .navigation,
+  .contact {
+    display: none;
+  }
+}
+
 /* TABLET */
 @media screen and (min-width: 768px) {
   .navigation {
@@ -679,17 +686,23 @@ address {
     text-align: left;
   }
 
+  .footer-title {
+    text-align: left;
+  }
+
+  .footer-column .logo {
+    justify-content: flex-start;
+  }
+
+  .subscribe {
+    flex-direction: row;
+    gap: 24px;
+  }
+
   .modal {
     max-width: 408px;
     min-height: 584px;
     padding: 72px 24px 24px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .navigation,
-  .contact {
-    display: none;
   }
 }
 
@@ -718,6 +731,12 @@ address {
 
   .container {
     max-width: 768px;
+  }
+
+  .page-footer .container {
+    padding: 0 108px;
+    justify-content: start;
+    gap: 72px 48px;
   }
 
   .team .container {
@@ -753,5 +772,18 @@ address {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
+  }
+
+  .page-footer .container {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .footer-column:nth-child(2) {
+    margin-left: 120px;
+  }
+
+  .footer-column:nth-child(3) {
+    margin-left: 80px;
   }
 }
